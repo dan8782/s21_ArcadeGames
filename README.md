@@ -1,46 +1,49 @@
-# Getting Started with Create React App
+# Проект "Arcade Games"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Обзор Проекта
 
-## Available Scripts
+Привет! В рамках этого проекта мы создали веб-приложение, включающее три игры: Сапер, 2048 и Пятнашки. Также в проекте реализована система аутентификации, регистрации пользователей и страница статистики для отслеживания производительности в играх.
 
-In the project directory, you can run:
+## Структура Проекта
 
-### `npm start`
+Приложение включает в себя следующие страницы:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. **Страница Аутентификации (localhost:3000/signIn):**
+   - Позволяет пользователям войти в систему.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. **Страница Регистрации (localhost:3000/signUp):**
+   - Позволяет пользователям создать новый аккаунт.
 
-### `npm test`
+3. **Страница Сапера (localhost:3000/minesweeper):**
+   - Отображает игру в Сапер с уровнями сложности: Легкий, Средний и Сложный.
+   - Пользователи могут устанавливать флаги на потенциальные места бомб.
+   - Условие победы: правильно пометить все места с бомбами.
+   - Условие поражения: открыть ячейку с бомбой.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Страница 2048 (localhost:3000/2048):**
+   - Отображает игровое поле 4x4 для игры в 2048.
+   - Пользователи могут свайпать или использовать стрелки для объединения одинаковых блоков.
+   - Игра заканчивается, когда поле полностью заполнено, и счет - это сумма всех значений блоков.
 
-### `npm run build`
+5. **Страница Пятнашек (localhost:3000/tagGame):**
+   - Отображает игровое поле 4x4 для игры в Пятнашки.
+   - Пользователи могут перемещать блоки с номерами, устраивая их по возрастанию.
+   - Отслеживает количество ходов и рекорды.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6. **Страница Статистики (localhost:3000/myStats):**
+   - Показывает статистику для каждой игры:
+      - Сапер: Количество сыгранных, выигранных и проигранных игр для каждого уровня сложности.
+      - 2048: Количество сыгранных игр, лучший результат и среднее количество ходов за игру.
+      - Пятнашки: Количество сыгранных игр, лучший результат и среднее количество ходов.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Модели для Базы Данных
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Модели базы данных выбирались с использованием Prisma для сохранения и получения состояния игр, аутентификации пользователей и статистики игр.
 
-### `npm run eject`
+## Стиль и Использованные Библиотеки
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+В разработке использовалась библиотека стилей Material-UI. Для маршрутизации использовался React Router DOM. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Командный Проект
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Этот проект был командным, и мы успешно объединили усилия для создания разнообразных игр и функциональных страниц.
