@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User{
+    id      Int      @id @default(autoincrement())
+    username String @unique
+    password String // в зашифрованном виде
+    //tag
+    tagGames Int @default(0)
+    tagRecord Int @default(0)
+    tagsMoves Int @default(0)
+    //2048
+    threesGames Int @default(0)
+    threesGamesRecord Int @default(0)
+    threesMoves Int @default(0)
+    //mine
+    easy Int @default(0)
+    megium Int @default(0)
+    hard Int @default(0)
+}
